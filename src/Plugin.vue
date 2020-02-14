@@ -3,7 +3,7 @@
 		<div class="uk-flex uk-flex-start">
 			<div>
 				Current version:
-				<b>{{ model.version }}</b>
+				<b>{{ model.current }}</b>
 			</div>
 		</div>
 	</div>
@@ -21,7 +21,7 @@ export default {
 		getDefaults() {
 			return {
 				plugin: PLUGIN_NAME,
-				version: ''
+				current: ''
 			};
 		},
 		getComputed() {
@@ -32,7 +32,7 @@ export default {
 			// constraints checks are left to the browser
 			const computed = {
 				...defaults,
-				version: this.options.version
+				current: this.options.version
 			};
 
 			// return the computed
